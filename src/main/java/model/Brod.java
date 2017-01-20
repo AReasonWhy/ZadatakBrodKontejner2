@@ -5,6 +5,8 @@ import com.j256.ormlite.field.DatabaseField;
 import com.j256.ormlite.field.ForeignCollectionField;
 import com.j256.ormlite.table.DatabaseTable;
 
+import java.util.Collection;
+
 /**
  * Created by androiddevelopment on 20.1.17..
  */
@@ -54,6 +56,14 @@ public class Brod {
 
     public void setNaziv(String naziv) {
         this.naziv = naziv;
+    }
+
+    public Collection<Kontejner> getKontejner() {
+        return kontejner;
+    }
+
+    public void setKontejner(ForeignCollection<Kontejner> kontejner) {
+        this.kontejner = kontejner;
     }
 
     @Override

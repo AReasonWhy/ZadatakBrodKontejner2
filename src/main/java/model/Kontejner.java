@@ -64,6 +64,11 @@ public class Kontejner {
         this.tezina = tezina;
     }
 
+    public void setBrod(Brod brod) {
+        this.brod = brod;
+    }
+    public Brod getBrod(){return brod;}
+
     @Override
     public String toString(){
         return "Kontejner{" +
@@ -74,4 +79,6 @@ public class Kontejner {
 
 
     }
+
+
 }

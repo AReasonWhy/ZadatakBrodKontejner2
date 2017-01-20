@@ -6,6 +6,8 @@ import com.j256.ormlite.table.TableUtils;
 import model.Brod;
 import model.Kontejner;
 
+import java.io.IOException;
+
 /**
  * Created by androiddevelopment on 20.1.17..
  */
@@ -25,7 +27,15 @@ public class Zadatak1KreiranjeTabela {
 
 
         } catch ( Exception e ){
-            System.out.println("Greska");
+            e.printStackTrace();
+        }finally {
+            if (connectionSource != null) {
+                try {
+                    connectionSource.close();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
         }
 
     }
